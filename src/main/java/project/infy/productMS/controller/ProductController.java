@@ -174,7 +174,7 @@ public class ProductController {
 		logger.info("adding subscriber product");
 		ResponseEntity<String> response = null;
 		try {
-			String url = "http://localhost:8200/buyer/"+subscribedProductDTO.getBuyerId()+"/privileged";
+			String url = "http://15.207.100.220:8200/buyer/"+subscribedProductDTO.getBuyerId()+"/privileged";
 			Boolean isPrivileged = restTemplate().getForObject(url,Boolean.class);
 			if(isPrivileged) {
 				productService.addSubscribedProduct(subscribedProductDTO);
