@@ -186,7 +186,7 @@ public class ProductController {
 				response = new ResponseEntity<String>(message,HttpStatus.BAD_REQUEST);
 			}
 		}catch (Exception e) {
-			response = new ResponseEntity<String>(environment.getProperty(e.getMessage()),HttpStatus.BAD_REQUEST);
+			response = new ResponseEntity<String>(e.getMessage(),HttpStatus.BAD_REQUEST);
 			
 		}
 		return response;
